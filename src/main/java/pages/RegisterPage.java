@@ -7,22 +7,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class RegisterPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private By dropdownCollege = By.id("college");
-    private By dropdownCourse = By.id("course");
-    private By givenName = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[1]");
-    private By familyName = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[2]");
-    private By email = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[3]");
-    private By phone = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[4]");
-    private By password = By.xpath("//input[@class='form-control' and following-sibling::label[@for='floatingPassword']]");
-    private By signUpButton = By.xpath("//button[@class='btn btn-primary text-uppercase']");
+    final WebDriver driver;
+    final WebDriverWait wait;
+    final By dropdownCollege = By.id("college");
+    final By dropdownCourse = By.id("course");
+    final By givenName = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[1]");
+    final By familyName = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[2]");
+    final By email = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[3]");
+    final By phone = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[4]");
+    final By password = By.xpath("//input[@class='form-control' and following-sibling::label[@for='floatingPassword']]");
+    final By signUpButton = By.xpath("//button[@class='btn btn-primary text-uppercase']");
     public RegisterPage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));

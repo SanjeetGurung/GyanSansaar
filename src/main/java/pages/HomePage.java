@@ -9,11 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class HomePage {
-    private WebDriver driver;
-    private WebElement element;
-    private WebDriverWait wait; // Declare WebDriverWait
+    final WebDriver driver;
+    final WebDriverWait wait; // Declare WebDriverWait
 
-    private By clickLogin = By.xpath("(//a[@class='nav-link icon-nav-link'])[5]");
+    final By clickLogin = By.xpath("(//a[@class='nav-link icon-nav-link'])[5]");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -21,7 +20,7 @@ public class HomePage {
     }
 
     public LoginPage clickLogin() {
-        element = wait.until(ExpectedConditions.elementToBeClickable(clickLogin));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(clickLogin));
         element.click();
         return new LoginPage(driver);
     }

@@ -3,7 +3,6 @@ package register;
 import base.BaseTest;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.RegisterPage;
 import pages.VerificationPage;
 
 import static org.testng.Assert.assertEquals;
