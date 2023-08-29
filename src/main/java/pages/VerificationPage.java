@@ -6,10 +6,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class VerificationPage {
-    private WebDriver driver;
+    final WebDriver driver;
     final WebDriverWait wait;
 
     final By verificationCode = By.id("verification_pin");
