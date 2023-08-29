@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="FirefoxTest">
+    <test verbose="2" name="FirefoxTest">
         <parameter name="browser" value="firefox">
         </parameter>
         <classes>
@@ -12,7 +12,7 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" name="Chrometest">
+    <test verbose="2" name="Chrometest">
         <parameter name="browser" value="chrome">
         </parameter>
         <classes>
@@ -23,7 +23,7 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" name="EdgeTest">
+    <test verbose="2" name="EdgeTest">
         <parameter name="browser" value="edge">
         </parameter>
         <classes>

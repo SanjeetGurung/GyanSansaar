@@ -53,7 +53,7 @@ public class CrossBrowserTest {
         driver.get("http://gsf.kasturisanjaal.com/app/index");
         String actualTitle = driver.getTitle();
         String expect = "Gyansansaar";
-        Assert.assertEquals(actualTitle.contains("Gyansansaar"),expect.contains("Gyansansaar"));
+        Assert.assertEquals(actualTitle.contains("Gyansansaar"), true);
     }
     @AfterTest
     public void endTest(){
