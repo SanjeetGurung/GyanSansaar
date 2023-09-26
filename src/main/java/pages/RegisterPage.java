@@ -21,6 +21,7 @@ public class RegisterPage {
     final By email = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[3]");
     final By phone = By.xpath("(//input[@class='form-control' and following-sibling::label[@for='floatingInput']])[4]");
     final By password = By.xpath("//input[@class='form-control' and following-sibling::label[@for='floatingPassword']]");
+    final By confirmPassword = By.xpath("//*[@id=\"app\"]/div/div[1]/div/div/div[1]/div/div[2]/form/div[8]/input");
     final By signUpButton = By.xpath("//button[@class='btn btn-primary text-uppercase']");
     public RegisterPage(WebDriver driver){
         this.driver = driver;
@@ -62,6 +63,9 @@ public class RegisterPage {
     }
     public void setPassword(String passWord){
         wait.until(ExpectedConditions.elementToBeClickable(password)).sendKeys(passWord);
+    }
+    public void setConfirmPassword(String confirmPassword1){
+        wait.until(ExpectedConditions.elementToBeClickable(confirmPassword)).sendKeys(confirmPassword1);
     }
     public VerificationPage clickSignUpButton(){
         wait.until(ExpectedConditions.elementToBeClickable(signUpButton)).click();

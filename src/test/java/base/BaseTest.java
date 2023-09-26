@@ -1,5 +1,6 @@
 package base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -14,8 +15,13 @@ public class BaseTest {
     protected HomePage homePage;
     @BeforeClass
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver-win64/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","resources/chromedriver-win64/chromedriver.exe");
+
+        // Use WebDriverManager to setup ChromeDriver
+        WebDriverManager.chromedriver().setup();
+        // Create a WebDriver instance
         driver = new ChromeDriver();
+
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         goHome();
     }
