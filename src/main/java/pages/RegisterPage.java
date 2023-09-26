@@ -33,7 +33,7 @@ public class RegisterPage {
     }
     public List<String> getSelectedOptionsCollege(){
         List<WebElement> selectedElementsCollege = findDropdownCollege().getAllSelectedOptions();
-        return selectedElementsCollege.stream().map(e->e.getText()).collect(Collectors.toList());
+        return selectedElementsCollege.stream().map(WebElement::getText).collect(Collectors.toList());
     }
     private Select findDropdownCollege(){
         return new Select(wait.until(ExpectedConditions.elementToBeClickable(dropdownCollege)));
@@ -43,7 +43,7 @@ public class RegisterPage {
     }
     public List<String> getSelectedOptionsCourse(){
         List<WebElement> selectedElementsCourse = findDropdownCourse().getAllSelectedOptions();
-        return selectedElementsCourse.stream().map(e->e.getText()).collect(Collectors.toList());
+        return selectedElementsCourse.stream().map(WebElement::getText).collect(Collectors.toList());
     }
     private Select findDropdownCourse(){
         return new Select(wait.until(ExpectedConditions.elementToBeClickable(dropdownCourse)));
